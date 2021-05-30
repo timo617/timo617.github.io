@@ -312,7 +312,8 @@ text-align: center;
     <h1 id="text2"> &rang;Türme</h1>
     <p id="text2">
     Aktuell gibt es nur einen Turm, denn du einsetzen kannst und es können <strong>maximal 3 Türme </strong>auf dem Feld sein. <br>
-        Der Turm kann das Feld darüber, darunter, links von ihm und rchts von ihm angreifen. Er schießt jede 0,8 Sekunden.
+        Der Turm kann das Feld darüber, darunter, links von ihm und rechts von ihm angreifen. Er schießt jede 0,8 Sekunden.<br>
+     Du setzt einen Turm, indem du ein Feld anklickst und  dann auf den Turm Button drückst.
     
     </p>
     <button id="btn" onclick="btn();"class="pushable">
