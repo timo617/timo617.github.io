@@ -1,0 +1,1503 @@
+<html >
+
+    <title>Tower Defense</title>
+<head>
+  <link rel="stylesheet" href="easy-modal.min.css" />
+<script src="easy-modal.min.js"></script>
+    
+</head>
+
+<body  bgcolor="yellowgreen" class="siteborder" onload="update(); dis();">
+    <h1 id="kopfleiste">Tower Defens Demo</h1>
+
+    <style type='text/css'>
+         #kopfleiste {
+                        background-color: saddlebrown; 
+                        width: 100%;
+                         color: white;
+                        text-align: center;
+                        border: 1px solid white;
+  }
+        #div1 {
+            width: auto;
+            height: auto;
+            background-color: blue;
+            float: left;
+        }
+        #div3
+        {
+            height: 90%;
+            background-color: saddlebrown;
+            float: ;
+            border: 1px solid white;
+            
+        }
+        #buttonright{
+              float: right;
+        }
+         #div2
+        {
+            
+            float: left;
+            
+        }
+        
+        tr {
+            width: 100%;
+        }
+        .right{
+           float: right;
+        }
+        .left{
+             float: left;
+        }
+        .bild {
+            width: 5%;
+            height: auto;
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: -2;
+            margin-right: -2;
+            margin-top: -2;
+            margin-bottom: -2;
+            border: 1px solid white;
+        }
+        .bild2 {
+            width: 10%;
+            height: auto;
+            border: 1px solid white;
+            margin-right: 5px;
+        }
+         .bild3 {
+            width: 15%;
+            height: auto;
+            border: 1px solid white;
+           
+        }
+        .footertext{
+            font-family: monospace;
+            font-size: 12;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+          .sitefooter{
+            background-color: black;
+            
+            height: 50px;
+            margin-top: -50px
+            clear: both;
+                
+        }
+        .siteborder
+        {
+            margin-left: 10%;
+           
+            margin-right: 10%;
+            margin-bottom: 2%;
+                
+        }
+         .wrapper{
+
+                           width: %;
+                           margin: 0 auto;
+                           margin-right: 30%;
+                        
+                           border: 1px solid white;
+                              float: left;
+                       }
+        .wrapper2{
+
+                           width: %;
+                           margin-right: 110px;
+                           position: ;
+                        
+                           border: 1px solid white;
+                              float: left;
+                       }
+        .Border{
+                      border: 2px solid white;
+                      
+}              
+        .footer {  
+position: fixed;  
+left: 10px;  
+bottom: 5px;  
+right: 10px;   
+width: 95%;  
+background-color: black;  
+color: white;  
+text-align: center;  
+}  
+        #text
+                       {
+
+                           text-decoration: blink;
+                           color: #FFFFFF;
+                           font: sans-serif;
+                           font-size: x-large ;
+                           margin-left: 24%;
+                           width: 30%;
+                           }
+          #text2
+                       {
+
+                           text-decoration: blink;
+                           color: #FFFFFF;
+                           font: sans-serif;
+                           font-size: x-large ;
+                           width: 50%;
+                           margin-left: 37%;
+                           }
+         #text3
+                       {
+
+                           text-decoration: blink;
+                           color: #FFFFFF;
+                           font: sans-serif;
+                           font-size: x-large ;
+                           width: 40%;
+                           padding-left: 10%;
+                           }
+        #text4
+                       {
+
+                           text-decoration: blink;
+                           color: #FFFFFF;
+                           font: sans-serif;
+                           font-size: x-large ;
+                          width: 50px;
+                           }
+          #tabellel
+                       {
+
+                          color: #FFFFFF;
+                           width: 50%;
+                           margin-right: 20%;
+                           }
+      /* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: green;
+  color: white;
+  margin-top: 125px;
+}
+        .alert2 {
+  padding: 20px;
+  background-color: red;
+  color: white;
+  margin-top: 125px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+    </style>
+    <div >
+        
+        
+        
+<div id="div2" >
+    <div id="" >
+
+
+        <input type="image" class="bild" src="Gras.png"  onclick="Feld('A1', 1)" id="A1" name="1">
+        <input type="image" class="bild" src="Gras.png"  onclick="Feld('A2', 2)" id="A2" name="2">
+        <input type="image" class="bild" src="Gras.png"  onclick="Feld('A3', 3)" id="A3" name="3">
+        <input type="image" class="bild" src="Gras.png"  onclick="Feld('A4', 4)" id="A4" name="4">
+        <input type="image" class="bild" src="Gras.png"  onclick="Feld('A5', 5)" id="A5" name="5">
+        <input type="image" class="bild" src="Gras.png"  onclick="Feld('A6', 6)" id="A6" name="6">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('A7', 7)" id="A7" name="7">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('A8', 8)" id="A8" name="8">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('A9', 9)" id="A9" name="9">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('A10', 10)" id="A10" name="10">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('A11', 11)" id="A11" name="11">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('A12', 12)" id="A12" name="12">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('A13', 13)" id="A13" name="13">
+        <input type="image" class="bild" src="Basis.png" value="A1" onclick="Feld('A14', 14)" id="A14" name="14">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('A15', 15)" id="A15" name="15">
+      
+        
+    
+        
+        </div>
+        
+    
+    <div class="right">
+        <p id="text3">     Türme</p>
+        
+    <table class="wrapper2" id=""  >
+      <tr><td id="text4"><img class="bild3" src="icongeld.png" id="" name="">100</td></tr> 
+  <tr><td class="" id="">  <input type="image" class="" src="Turmv1.png" id="turm1" name="" onclick="tausch();"></td> </tr> 
+  <tr><td class="" id=""> <img class="" src="mystery.png" id="" name=""> </td> </tr>
+  <tr><td class="" id="">  <img class="" src="mystery.png" id="" name=""></td> </tr>
+         
+         </table>
+    
+    </div>
+    
+    
+   
+    
+    
+
+    <div id="">
+        <img class="bild" src="Weg.png" id="1" name="16">
+        <img class="bild" src="Weg.png" id="2" name="17">
+        <img class="bild" src="Weg.png" id="3" name="18">
+        <img class="bild" src="Weg.png" id="4" name="19">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('B1', 20)" id="B1" name="20">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('B2', 21)" id="B2" name="21">
+        <img class="bild" src="Weg.png" id="17" name="22">
+        <img class="bild" src="Weg.png" id="18" name="23">
+        <img class="bild" src="Weg.png" id="19" name="24">
+        <img class="bild" src="Weg.png" id="20" name="25">
+        <img class="bild" src="Weg.png" id="21" name="26">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('B3', 27)" id="B3" name="27">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('B4', 28)" id="B4" name="28">
+        <img class="bild" src="Weg.png" id="34" name="29">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('B5', 30)" id="B5" name="30">
+ 
+       
+    </div>
+        
+    
+    <div id="">
+
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('C1', 31)" id="C1" name="31">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('C2', 31)" id="C2" name="32">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('C3', 31)" id="C3" name="33">
+        <img class="bild" src="Weg.png" id="5" name="34">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('C4', 31)" id="C4" name="35">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('C5', 31)" id="C5" name="36">
+        <img class="bild" src="Weg.png" id="16" name="37">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('C6', 31)" id="C6" name="38">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('C7', 31)" id="C7" name="39">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('C8', 31)" id="C8" name="40">
+        <img class="bild" src="Weg.png" id="22" name="41">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('C9', 31)" id="C9" name="42">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('C10', 31)" id="C10" name="43">
+        <img class="bild" src="Weg.png" id="33" name="44">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('C11', 31)" id="C11" name="45">
+
+       
+
+    </div>
+        
+    
+    <div id="">
+
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('D1', 46)" id="D1" name="46">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('D2', 47')" id="D2" name="47">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('D3', 48)" id="D3" name="48">
+        <img class="bild" src="Weg.png" id="6" name="49">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('D4', 49)" id="D4" name="50">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('D5', 50)" id="D5" name="51">
+        <img class="bild" src="Weg.png" id="15" name="52">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('D6', 51)" id="D6" name="53">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('D7', 52)" id="D7" name="54">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('D8', 53)" id="D8" name="55">
+        <img class="bild" src="Weg.png" id="23" name="56"> 
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('D9', 54)" id="D9" name="57">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('D10', 55)" id="D10" name="58">
+        <img class="bild" src="Weg.png" id="32" name="59">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('D11', 56)" id="D11" name="60">
+   
+        
+
+    </div>
+    <div id="">
+
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('E1', 61)" id="E1" name="61">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('E2', 62)" id="E2" name="62">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('E3', 63)" id="E3" name="63">
+        <img class="bild" src="Weg.png" id="7" name="64">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('E4', 65)" id="E4" name="65">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('E5', 66)" id="E5" name="66">
+        <img class="bild" src="Weg.png" id="14" name="67">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('E6', 68)" id="E6" name="68">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('E7', 69)" id="E7" name="69">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('E8', 70)" id="E8" name="70">
+        <img class="bild" src="Weg.png" id="24" name="71">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('E9', 72)" id="E9" name="72">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('E10', 73)" id="E10" name="73">
+        <img class="bild" src="Weg.png" id="31" name="74">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('E11', 75)" id="E11" name="75">
+        
+        
+
+    </div>
+    <div id="">
+
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('F1', 76)" id="F1" name="76">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('F2', 77)" id="F2" name="77">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('F3', 78)" id="F3" name="78">
+        <img class="bild" src="Weg.png" id="8" name="79">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('F4', 80)" id="F4" name="80">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('F5', 81)" id="F5" name="81">
+        <img class="bild" src="Weg.png" id="13" name="82">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('F6', 83)" id="F6" name="83">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('F7', 84)" id="F7" name="84">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('F8', 85)" id="F8" name="85">
+        <img class="bild" src="Weg.png" id="25"  name="86">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('F9', 87)" id="F9" name="87">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('F10', 88)" id="F10" name="88">
+        <img class="bild" src="Weg.png" id="30" name="89">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('F11', 90)" id="F11" name="90">
+      
+        
+
+    </div>
+    <div id="">
+
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('G1', 91)" id="G1" name="91">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('G2', 92)" id="G2" name="92">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('G3', 93)" id="G3" name="93">
+        <img class="bild" src="Weg.png" id="9" name="94">
+        <img class="bild" src="Weg.png" id="10" name="95">
+        <img class="bild" src="Weg.png" id="11" name="96">
+        <img class="bild" src="Weg.png" id="12" name="97">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('G4', 98)" id="G4" name="98">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('G5', 99)" id="G5" name="99">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('G6', 100)" id="G6" name="100">
+        <img class="bild" src="Weg.png" id="26" name="101">
+        <img class="bild" src="Weg.png" id="27" name="102">
+        <img class="bild" src="Weg.png" id="28" name="103">
+        <img class="bild" src="Weg.png" id="29" name="104">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('G7', 105)" id="G7" name="105">
+       
+        
+
+    </div>
+    <div id="">
+
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('H1', 106)" id="H1" name="106">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('H2', 107)" id="H2" name="107">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('H3', 108)" id="H3" name="108">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('H4', 109)" id="H4" name="109">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('H5', 110)" id="H5" name="110">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('H6', 111)" id="H6" name="111">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('H7', 112)" id="H7" name="112">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('H8', 113)" id="H8" name="113">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('H9', 114)" id="H9" name="114">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('H10', 115)" id="H10" name="115">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('H11', 116)" id="H11" name="116">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('H12', 117)" id="H12" name="117">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('H13', 118)" id="H13" name="118">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('H14', 119)" id="H14" name="119">
+        <input type="image" class="bild" src="Gras.png" value="A1" onclick="Feld('H15', 120)" id="H15" name="120">
+       
+        
+
+    </div>
+  
+   
+    
+    </div>
+    <div id="div3">
+        
+        
+        
+        <p id="text2">Infos</p>
+        <table class="wrapper" id="text"  >
+      <tr>
+  <td class="" id=""><img class="bild2" src="Iconleben.png" id="" name=""> Leben: <span  id="leben" ></span></td>
+  <td class="" id=""><img class="bild2" src="icongeld.png" id="" name="">Geld:  <span  id="geld" ></span></td>
+  <td class="" id=""><img class="bild2" src="Gegner1.png" id="" name="">Welle:  <span  id="welle" ></span></td>
+  <td class="" id=""><input type="button" id="start" value="Start" onclick="enemy2(); this.disabled = true;"></td>
+          </tr>
+  </table>
+        
+        
+        <div class="alert"  >
+  <span class="closebtn" id="erfolg" onload="this.disabled = true;" onclick="this.parentElement.style.display='none';">&times;</span>
+ <strong>Erfolg!</strong>  Du hast alle 5 Wellen geschafft!
+</div>
+        
+        <div class="alert2"  >
+  <span class="closebtn" id="verloren" onload="this.disabled = true;" onclick="this.parentElement.style.display='none';">&times;</span>
+ <strong>Verloren!</strong>  Du hast nicht alle 5 Wellen geschafft!
+</div>
+        
+        
+        
+      
+    </div>
+        
+        </div>
+    
+<div class="footer">  
+@Copyright  2021 - All Right Reserved. Timo und Leon Informatik  
+</div> 
+    
+</body>
+<script>
+    
+    //Variablen
+    
+    var Feld;
+    var wegid;
+    var wegid2;
+    var wegid3;
+    var wegid4;
+    var wegid5;
+    var wegid6;
+    var wegid7;
+    var wegid8;
+    var wegid9;
+    var wegid10;
+    var wegid11;
+    var wegid12;
+    var wegid13;
+    var wegid14;
+    var wegid15;
+    var wegid16;
+    var wegid17;
+    var feldid;
+    var feldid2;
+    var anzahl;
+    var geld = 100;
+    var leben = 30;
+    var welle = 0;
+    var go1;
+    var go2;
+    var go3;
+    var go4;
+    var go5;
+    var turmid;
+    var turmleft;
+    var turmright;
+    var turmup;
+    var turmdown;
+    var turmid2;
+    var turmleft2;
+    var turmright2;
+    var turmup2;
+    var turmdown2;
+    var turmid3;
+    var turmleft3;
+    var turmright3;
+    var turmup3;
+    var turmdown3;
+    var turmzahl = 1;
+    var ende = 1;
+    
+    
+    function update(){
+        
+        //Update Funktion
+        
+        document.getElementById("leben").innerHTML = leben;
+        document.getElementById("welle").innerHTML = welle;
+        document.getElementById("geld").innerHTML = geld;
+        
+        if(leben == 0){
+            
+          document.getElementById("start").disabled = true;
+            document.getElementById("verloren").parentElement.style.display="block";
+        }
+              
+    }
+    
+        
+    
+    function dis(){
+        
+        
+        document.getElementById("erfolg").parentElement.style.display='none';
+        document.getElementById("verloren").parentElement.style.display='none';
+        
+    }
+    
+    
+    
+    setInterval(update, 500);
+    
+    function tausch(){
+        
+        //platzieren eines Turms und welcher Turm ist es?
+        if(geld > 99 && document.getElementById(feldid).getAttribute("src") != "Turmv1.png"){
+         document.getElementById(feldid).setAttribute("src", "Turmv1.png");
+            geld = geld - 100;
+            if(turmzahl == 3){
+            turmid3 = document.getElementById(feldid).getAttribute("name");
+                turmzahl++;
+                document.getElementById("turm1").setAttribute("src", "turm1grau.png");
+                document.getElementById("turm1").disabled = true;
+            }
+            if(turmzahl == 2){
+            turmid2 = document.getElementById(feldid).getAttribute("name");
+                turmzahl++;
+            }
+            if(turmzahl == 1){
+            turmid = document.getElementById(feldid).getAttribute("name");
+                turmzahl++;
+            }
+            
+            
+        }
+    }
+    
+    function Feld(feldid2, wegid2){
+        
+        //Wo ist ein Turm?
+        
+        feldid = feldid2;
+        wegid = wegid2;
+    }
+    
+    function enemy(){
+        
+    }
+    function enemy2(){
+        
+        //Welle start
+       
+        welle++;
+        if(welle == 1){
+            go1 = 1;
+            anzahl = 1;
+            console.log("klappt");
+            setTimeout(move, 1000);
+        }
+        if(welle == 2){
+            go1 = 1;
+            go2 = 1;
+            anzahl = 2;
+            setTimeout(move2, 1000);
+            setTimeout(move3, 3000);
+        }
+         if(welle == 3){
+            go1 = 1;
+            go2 = 1;
+            go3 = 1;
+            anzahl = 3;
+            setTimeout(move5, 1000);
+            setTimeout(move6, 3000);
+            setTimeout(move7, 5000); 
+        }
+        if(welle == 4){
+            go1 = 1;
+            go2 = 1;
+            go3 = 1;
+            go4 = 1;
+            anzahl = 4;
+            setTimeout(move8, 1000);
+            setTimeout(move9, 3000);
+            setTimeout(move10, 5000);
+            setTimeout(move11, 7000); 
+        }
+        if(welle == 5){
+            go1 = 1;
+            go2 = 1;
+            go3 = 1;
+            go4 = 1;
+            go5 = 1;
+            anzahl = 5;
+            setTimeout(move12, 1000);
+            setTimeout(move13, 3000);
+            setTimeout(move14, 5000);
+            setTimeout(move15, 7000); 
+            setTimeout(move16, 9000); 
+        }
+    }
+    //Welle: 1 Gegener: 1
+    async function move(){
+        wegid3 = 1;
+        for(var gegner = 34; gegner > 0; gegner--){
+            if(go1 == 1){
+                document.getElementById(wegid3).setAttribute("src", "Weg.png");
+                wegid3++;
+                document.getElementById(wegid3).setAttribute("src", "Gegner1.png");
+               if (wegid3 == 34) {
+                   leben = leben - 5;
+                   anzahl = anzahl - 1;
+                   move4();
+                   update();
+               }
+                await waitforme(600);
+            }
+                      
+        }
+    }
+    //Welle: 2 Gegener: 1
+    async function move2(){
+         wegid4 = 1;
+         for(var gegner = 34; gegner > 0; gegner--){
+            if(go1 == 1){
+                document.getElementById(wegid4).setAttribute("src", "Weg.png");
+                wegid4++;
+                document.getElementById(wegid4).setAttribute("src", "Gegner1.png");
+               if (wegid4 == 34) {
+                   leben = leben - 5;
+                   anzahl = anzahl - 1;
+                   move4();
+                   update();
+               }
+                await waitforme(500);
+            }
+                      
+        }
+    }
+    //Welle: 2 Gegener: 2
+    async function move3(){
+         wegid5 = 1;
+         for(var gegner = 34; gegner > 0; gegner--){
+            if(go2 == 1){
+                document.getElementById(wegid5).setAttribute("src", "Weg.png");
+                wegid5++;
+                document.getElementById(wegid5).setAttribute("src", "Gegner2.png");
+               if (wegid5 == 34) {
+                   leben = leben - 5;
+                   anzahl = anzahl - 1;
+                   move4();
+                   update();
+               }
+                await waitforme(500);
+            }
+                      
+        }
+    }
+    //Ist die Welle vorbei?
+    
+    function move4(){
+        if(anzahl == 0){
+            if(welle == 5){
+                
+                 document.getElementById("erfolg").parentElement.style.display="block";
+                document.getElementById("start").disabled = true;
+                
+            } else {
+            geld = geld + 100;
+            document.getElementById("start").disabled = false;
+            }
+        }
+    }
+    
+    async function move5(){
+        
+        wegid6 = 1;
+        for(var gegner = 34; gegner > 0; gegner--){
+            if(go1 == 1){
+                document.getElementById(wegid6).setAttribute("src", "Weg.png");
+                wegid6++;
+                document.getElementById(wegid6).setAttribute("src", "Gegner1.png");
+               if (wegid6 == 34) {
+                   leben = leben - 5;
+                   anzahl = anzahl - 1;
+                   move4();
+                   update();
+               }
+                await waitforme(450);
+            }
+                      
+        }
+        
+    }
+    async function move6(){
+        
+        wegid7 = 1;
+        for(var gegner = 34; gegner > 0; gegner--){
+            if(go2 == 1){
+                document.getElementById(wegid7).setAttribute("src", "Weg.png");
+                wegid7++;
+                document.getElementById(wegid7).setAttribute("src", "Gegner2.png");
+               if (wegid7 == 34) {
+                   leben = leben - 5;
+                   anzahl = anzahl - 1;
+                   move4();
+                   update();
+               }
+                await waitforme(450);
+            }
+                      
+        }
+        
+    }
+    async function move7(){
+        
+        wegid8 = 1;
+        for(var gegner = 34; gegner > 0; gegner--){
+            if(go3 == 1){
+                document.getElementById(wegid8).setAttribute("src", "Weg.png");
+                wegid8++;
+                document.getElementById(wegid8).setAttribute("src", "Gegner3.png");
+               if (wegid8 == 34) {
+                   leben = leben - 5;
+                   anzahl = anzahl - 1;
+                   move4();
+                   update();
+               }
+                await waitforme(450);
+            }
+                      
+        }
+        
+    }
+     async function move8(){
+        
+        wegid9 = 1;
+        for(var gegner = 34; gegner > 0; gegner--){
+            if(go1 == 1){
+                document.getElementById(wegid9).setAttribute("src", "Weg.png");
+                wegid9++;
+                document.getElementById(wegid9).setAttribute("src", "Gegner1.png");
+               if (wegid9 == 34) {
+                   leben = leben - 5;
+                   anzahl = anzahl - 1;
+                   move4();
+                   update();
+               }
+                await waitforme(400);
+            }
+                      
+        }
+        
+    }
+    async function move9(){
+        
+        wegid10 = 1;
+        for(var gegner = 34; gegner > 0; gegner--){
+            if(go2 == 1){
+                document.getElementById(wegid10).setAttribute("src", "Weg.png");
+                wegid10++;
+                document.getElementById(wegid10).setAttribute("src", "Gegner2.png");
+               if (wegid10 == 34) {
+                   leben = leben - 5;
+                   anzahl = anzahl - 1;
+                   move4();
+                   update();
+               }
+                await waitforme(400);
+            }
+                      
+        }
+        
+    }
+    async function move10(){
+        
+        wegid11 = 1;
+        for(var gegner = 34; gegner > 0; gegner--){
+            if(go3 == 1){
+                document.getElementById(wegid11).setAttribute("src", "Weg.png");
+                wegid11++;
+                document.getElementById(wegid11).setAttribute("src", "Gegner3.png");
+               if (wegid11 == 34) {
+                   leben = leben - 5;
+                   anzahl = anzahl - 1;
+                   move4();
+                   update();
+               }
+                await waitforme(400);
+            }
+                      
+        }
+        
+    }
+    async function move11(){
+        
+        wegid12 = 1;
+        for(var gegner = 34; gegner > 0; gegner--){
+            if(go4 == 1){
+                document.getElementById(wegid12).setAttribute("src", "Weg.png");
+                wegid12++;
+                document.getElementById(wegid12).setAttribute("src", "Gegner4.png");
+               if (wegid12 == 34) {
+                   leben = leben - 5;
+                   anzahl = anzahl - 1;
+                   move4();
+                   update();
+               }
+                await waitforme(400);
+            }
+                      
+        }
+        
+    }
+        async function move12(){
+        
+        wegid13 = 1;
+        for(var gegner = 34; gegner > 0; gegner--){
+            if(go1 == 1){
+                document.getElementById(wegid13).setAttribute("src", "Weg.png");
+                wegid13++;
+                document.getElementById(wegid13).setAttribute("src", "Gegner1.png");
+               if (wegid13 == 34) {
+                   leben = leben - 5;
+                   anzahl = anzahl - 1;
+                   move4();
+                   update();
+               }
+                await waitforme(375);
+            }
+                      
+        }
+        
+    }
+     async function move13(){
+      15
+        wegid14 = 1;
+        for(var gegner = 34; gegner > 0; gegner--){
+            if(go2 == 1){
+                document.getElementById(wegid14).setAttribute("src", "Weg.png");
+                wegid14++;
+                document.getElementById(wegid14).setAttribute("src", "Gegner2.png");
+               if (wegid14 == 34) {
+                   leben = leben - 5;
+                   anzahl = anzahl - 1;
+                   move4();
+                   update();
+               }
+                await waitforme(375);
+            }
+                      
+        }
+        
+    }
+    async function move14(){
+        
+        wegid15 = 1;
+        for(var gegner = 34; gegner > 0; gegner--){
+            if(go3 == 1){
+                document.getElementById(wegid15).setAttribute("src", "Weg.png");
+                wegid15++;
+                document.getElementById(wegid15).setAttribute("src", "Gegner3.png");
+               if (wegid15 == 34) {
+                   leben = leben - 5;
+                   anzahl = anzahl - 1;
+                   move4();
+                   update();
+               }
+                await waitforme(375);
+            }
+                      
+        }
+        
+    }
+    async function move15(){
+      16
+        wegid16 = 1;
+        for(var gegner = 34; gegner > 0; gegner--){
+            if(go4 == 1){
+                document.getElementById(wegid16).setAttribute("src", "Weg.png");
+                wegid16++;
+                document.getElementById(wegid16).setAttribute("src", "Gegner4.png");
+               if (wegid16 == 34) {
+                   leben = leben - 5;
+                   anzahl = anzahl - 1;
+                   move4();
+                   update();
+               }
+                await waitforme(375);
+            }
+                      
+        }
+        
+    }
+    async function move16(){
+        
+        wegid17 = 1;
+        for(var gegner = 34; gegner > 0; gegner--){
+            if(go5 == 1){
+                document.getElementById(wegid17).setAttribute("src", "Weg.png");
+                wegid17++;
+                document.getElementById(wegid17).setAttribute("src", "Gegner5.png");
+               if (wegid17 == 34) {
+                   leben = leben - 5;
+                   anzahl = anzahl - 1;
+                   move4();
+                   update();
+               }
+                await waitforme(375);
+            }
+                      
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    setInterval(turm, 300);
+    function turm(){
+        
+        //Berechnung wo ein Turm angreifen kann
+        
+        turmleft = parseInt(turmid) - 1;
+        turmright = parseInt(turmid) + 1;
+        turmup = parseInt(turmid) - 15;
+        turmdown = parseInt(turmid) + 15;
+        
+        turmleft2 = parseInt(turmid2) - 1;
+        turmright2 = parseInt(turmid2) + 1;
+        turmup2 = parseInt(turmid2) - 15;
+        turmdown2 = parseInt(turmid2) + 15;
+        
+        turmleft3 = parseInt(turmid3) - 1;
+        turmright3 = parseInt(turmid3) + 1;
+        turmup3 = parseInt(turmid3) - 15;
+        turmdown3 = parseInt(turmid3) + 15;
+        
+        console.log(turmup);
+        console.log(turmup2);
+        console.log(turmup3);
+        if(document.getElementsByName(turmleft)[0].getAttribute("src") == "Gegner1.png"){
+            
+            go1 = 0;
+            anzahl--;
+            move4();
+                document.getElementsByName(turmleft)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmleft2)[0].getAttribute("src") == "Gegner1.png"){
+            
+            go1 = 0;
+            anzahl--;
+            move4();
+                document.getElementsByName(turmleft2)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmleft3)[0].getAttribute("src") == "Gegner1.png"){
+            
+            go1 = 0;
+            anzahl--;
+            move4();
+                document.getElementsByName(turmleft3)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmright)[0].getAttribute("src") == "Gegner1.png"){
+            
+            go1 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmright)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmright2)[0].getAttribute("src") == "Gegner1.png"){
+            
+            go1 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmright2)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmright3)[0].getAttribute("src") == "Gegner1.png"){
+            
+            go1 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmright3)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmup)[0].getAttribute("src") == "Gegner1.png"){
+            
+            go1 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmup)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmup2)[0].getAttribute("src") == "Gegner1.png"){
+            
+            go1 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmup2)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmup3)[0].getAttribute("src") == "Gegner1.png"){
+            
+            go1 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmup3)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmdown)[0].getAttribute("src") == "Gegner1.png"){
+            
+            go1 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmdown)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmdown2)[0].getAttribute("src") == "Gegner1.png"){
+            
+            go1 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmdown2)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmdown3)[0].getAttribute("src") == "Gegner1.png"){
+            
+            go1 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmdown3)[0].setAttribute("src", "Weg.png");
+        }
+        
+        //Abfrage Gegener2 ----------------------------------------------------------------------------------------------------------------------------------------
+        
+        if(document.getElementsByName(turmleft)[0].getAttribute("src") == "Gegner2.png"){
+            
+            console.log("klappttool");
+            go2 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmleft)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmleft2)[0].getAttribute("src") == "Gegner2.png"){
+            
+            console.log("klappttool");
+            go2 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmleft2)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmleft3)[0].getAttribute("src") == "Gegner2.png"){
+            
+            console.log("klappttool");
+            go2 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmleft3)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmright)[0].getAttribute("src") == "Gegner2.png"){
+            
+            go2 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementById(turmright)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmright2)[0].getAttribute("src") == "Gegner2.png"){
+            
+            go2 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementById(turmright2)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmright3)[0].getAttribute("src") == "Gegner2.png"){
+            
+            go2 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementById(turmright3)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmup)[0].getAttribute("src") == "Gegner2.png"){
+            
+            go2 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmup)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmup2)[0].getAttribute("src") == "Gegner2.png"){
+            
+            go2 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmup2)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmup3)[0].getAttribute("src") == "Gegner2.png"){
+            
+            go2 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmup3)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmdown)[0].getAttribute("src") == "Gegner2.png"){
+            
+            go2 = 0; 
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmdown)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmdown2)[0].getAttribute("src") == "Gegner2.png"){
+            
+            go2 = 0; 
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmdown2)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmdown3)[0].getAttribute("src") == "Gegner2.png"){
+            
+            go2 = 0; 
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmdown3)[0].setAttribute("src", "Weg.png");
+        }
+        
+        
+        //Abfrage Gegner3 ----------------------------------------------------------------------------------------------------------------------------------
+        
+        
+        if(document.getElementsByName(turmleft)[0].getAttribute("src") == "Gegner3.png"){
+            
+            console.log("klappttool");
+            go3 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmleft)[0].setAttribute("src", "Weg.png");
+        }getAttribute("src") == "Gegner3.png"
+         if(document.getElementsByName(turmleft2)[0].getAttribute("src") == "Gegner3.png"){
+            
+            console.log("klappttool");
+            go3 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmleft2)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmleft3)[0].getAttribute("src") == "Gegner3.png"){
+            
+            console.log("klappttool");
+            go3 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmleft3)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmright)[0].getAttribute("src") == "Gegner3.png"){
+            
+            go3 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementById(turmright)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmright2)[0].getAttribute("src") == "Gegner3.png"){
+            
+            go3 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementById(turmright2)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmright3)[0].getAttribute("src") == "Gegner3.png"){
+            
+            go3 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementById(turmright3)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmup)[0].src == "Gegner3.png"){
+            
+            go3 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmup)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmup2)[0].getAttribute("src") == "Gegner3.png"){
+            
+            go3 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmup2)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmup3)[0].getAttribute("src") == "Gegner3.png"){
+            
+            go3 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmup3)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmdown)[0].getAttribute("src") == "Gegner3.png"){
+            
+            go3 = 0; 
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmdown)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmdown2)[0].getAttribute("src") == "Gegner3.png"){
+            
+            go3 = 0; 
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmdown2)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmdown3)[0].getAttribute("src") == "Gegner3.png"){
+            
+            go3 = 0; 
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmdown3)[0].setAttribute("src", "Weg.png");
+        }
+        
+        //Gegner4
+        
+        
+        if(document.getElementsByName(turmleft)[0].getAttribute("src") == "Gegner4.png"){
+            
+            console.log("klappttool");
+            go4 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmleft)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmleft2)[0].getAttribute("src") == "Gegner4.png"){
+            
+            console.log("klappttool");
+            go4 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmleft2)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmleft3)[0].getAttribute("src") == "Gegner4.png"){
+            
+            console.log("klappttool");
+            go4 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmleft3)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmright)[0].getAttribute("src") == "Gegner4.png"){
+            
+            go4 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementById(turmright)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmright2)[0].getAttribute("src") == "Gegner4.png"){
+            
+            go4 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementById(turmright2)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmright3)[0].getAttribute("src") == "Gegner4.png"){
+            
+            go4 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementById(turmright3)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmup)[0].getAttribute("src") == "Gegner4.png"){
+            
+            go4 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmup)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmup2)[0].getAttribute("src") == "Gegner4.png"){
+            
+            go4 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmup2)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmup3)[0].getAttribute("src") == "Gegner4.png"){
+            
+            go4 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmup3)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmdown)[0].getAttribute("src") == "Gegner4.png"){
+            
+            go4 = 0; 
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmdown)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmdown2)[0].getAttribute("src") == "Gegner4.png"){
+            
+            go4 = 0; 
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmdown2)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmdown3)[0].getAttribute("src") == "Gegner4.png"){
+            
+            go4 = 0; 
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmdown3)[0].setAttribute("src", "Weg.png");
+        }
+        
+        //Gegner 5
+        
+        if(document.getElementsByName(turmleft)[0].getAttribute("src") == "Gegner5.png"){
+            
+            console.log("klappttool");
+            go5 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmleft)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmleft2)[0].getAttribute("src") == "Gegner5.png"){
+            
+            console.log("klappttool");
+            go5 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmleft2)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmleft3)[0].getAttribute("src") == "Gegner5.png"){
+            
+            console.log("klappttool");
+            go5 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmleft3)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmright)[0].getAttribute("src") == "Gegner5.png"){
+            
+            go5 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementById(turmright)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmright2)[0].getAttribute("src") == "Gegner5.png"){
+            
+            go5 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementById(turmright2)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmright3)[0].getAttribute("src") == "Gegner5.png"){
+            
+            go5 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementById(turmright3)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmup)[0].getAttribute("src") == "Gegner5.png"){
+            
+            go5 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmup)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmup2)[0].getAttribute("src") == "Gegner5.png"){
+            
+            go5 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmup2)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmup3)[0].getAttribute("src") == "Gegner5.png"){
+            
+            go5 = 0;
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmup3)[0].setAttribute("src", "Weg.png");
+        }
+        if(document.getElementsByName(turmdown)[0].getAttribute("src") == "Gegner5.png"){
+            
+            go5 = 0; 
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmdown)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmdown2)[0].getAttribute("src") == "Gegner5.png"){
+            
+            go5 = 0; 
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmdown2)[0].setAttribute("src", "Weg.png");
+        }
+         if(document.getElementsByName(turmdown3)[0].getAttribute("src") == "Gegner5.png"){
+            
+            go5 = 0; 
+            anzahl--;
+            move4();
+
+            document.getElementsByName(turmdown3)[0].setAttribute("src", "Weg.png");
+        }
+    }
+    function waitforme(ms)  {
+
+//wait function
+
+        
+return new Promise( resolve => {
+
+    setTimeout(()=> {resolve('')} ,ms );
+
+})
+
+}
+    //Pop-Up
+    var modal = new SimplyModal({
+      title: "Modal Box",
+      content: "Modal Description",
+      autoOpen: true,
+      closeButton: true,
+      type: "modal",
+      className: ['fadein', 'slideRight', 'slideBottom', 'fall', 'flid3d', 'flid3dVertical', 'scale', 'folding', 'rotateLeft'],
+      maxWidth: '',
+      minWidth: '',
+      overlay: true,
+      setTimeOut: false,
+      overlayClass: 'easy-modal-overlay',
+      modalTypeClass: ['error', 'info', 'warn', 'succes'],
+      closeText: 'X'
+
+});
+</script>
+    
+    
+</html>
